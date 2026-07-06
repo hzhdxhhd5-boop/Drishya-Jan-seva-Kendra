@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drishya Jan Seva Kendra - CSC e-Gov Portal</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f8fafc; color: #0f172a; padding-bottom: 40px; }
+        
+        header { background: linear-gradient(135deg, #0f172a, #1e293b); color: white; text-align: center; padding: 45px 20px; border-bottom: 6px solid #e0a96d; }
+        header h1 { font-size: 2.3rem; margin-bottom: 10px; font-weight: 700; letter-spacing: 0.5px; }
+        header p { font-size: 1.1rem; color: #e0a96d; font-weight: 600; }
+        
+        .container { max-width: 1400px; margin: 0 auto; padding: 20px; }
+        
+        /* Profile bar */
+        .profile-bar { background: #ffffff; border-radius: 12px; border-left: 6px solid #1b263b; box-shadow: 0 4px 6px rgba(0,0,0,0.02); padding: 20px; margin: 25px 0 35px 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .profile-item { font-size: 1.05rem; margin: 5px 15px; color: #334155; }
+        .profile-item strong { color: #1b263b; }
+
+        /* SECTION STYLING */
+        .section-title { font-size: 1.6rem; color: #0f172a; margin: 40px 0 20px 0; padding-bottom: 8px; border-bottom: 2px solid #cbd5e1; position: relative; font-weight: 700; }
+        .section-title::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 60px; height: 2px; background: #e0a96d; }
+        
+        /* GRID LAYOUT FOR SERVICES */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
+        .card { background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); display: flex; flex-direction: column; justify-content: space-between; transition: all 0.3s ease; }
+        .card:hover { transform: translateY(-4px); box-shadow: 0 12px 20px rgba(0,0,0,0.06); border-color: #e0a96d; }
+        .card h3 { font-size: 1.2rem; color: #1e293b; margin-bottom: 10px; font-weight: 600; border-bottom: 1px solid #f1f5f9; padding-bottom: 8px; }
+        .card p { font-size: 0.95rem; color: #64748b; line-height: 1.6; margin-bottom: 18px; }
+        
+        /* BUTTONS SECTION INSIDE CARD */
+        .btn-group { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .btn { display: block; text-align: center; padding: 10px 5px; border-radius: 6px; font-weight: bold; font-size: 0.85rem; text-decoration: none; transition: 0.2s; }
+        .btn-reg { background: #1b263b; color: white; }
+        .btn-reg:hover { background: #0d1b2a; }
+        .btn-status { background: #e0a96d; color: #1b263b; border: 1px solid #e0a96d; }
+        .btn-status:hover { background: #d49a5b; }
+        .btn-wa { background: #25d366; color: white; grid-column: span 2; margin-top: 5px; }
+        .btn-wa:hover { background: #1fbc54; }
+        
+        .motto-bar { background: #1b263b; color: white; text-align: center; padding: 15px; font-size: 1.2rem; font-weight: bold; font-style: italic; letter-spacing: 0.5px; border-top: 3px solid #e0a96d; margin-top: 50px; }
+        footer { background: #0f172a; color: #94a3b8; text-align: center; padding: 20px; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>दृश्य जन सेवा केंद्र (Drishya Jan Seva Kendra)</h1>
+        <p>CSC e-Gov Services — मधेपुरा, जालौन (उत्तर प्रदेश)</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- Profile bar -->
+        <div class="profile-bar">
+            <div class="profile-item"><strong>संचालक:</strong> प्रो. नितेन्द्र कुमार</div>
+            <div class="profile-item"><strong>📞 मोबाइल नंबर:</strong> <a href="tel:7302507259" style="color:#25d366; text-decoration:none; font-weight:bold;">7302507259</a></div>
+            <div class="profile-item"><strong>📍 पता:</strong> मधेपुरा, बरगद के पास, जालौन, उत्तर प्रदेश - 285124</div>
+        </div>
+
+        <!-- MAIN ALL CSC SERVICES BASED ON IMAGE LIST -->
+        <h2 class="section-title">💼 सभी डिजिटल एवं सरकारी सेवाएं (Registration & Status Links)</h2>
+        <div class="services-grid">
+
+            <!-- Card 1: Voter ID -->
+            <div class="card">
+                <h3>🗳️ Voter ID Card</h3>
+                <p>नया वोटर आईडी कार्ड ऑनलाइन रजिस्ट्रेशन करें या पुराने का लाइव स्टेटस चेक करें।</p>
+                <div class="btn-group">
+                    <a href="https://voters.eci.gov.in" class="btn btn-reg" target="_blank">Register Portal</a>
+                    <a href="https://voters.eci.gov.in/home/track-application-status" class="btn btn-status" target="_blank">Check Status</a>
+                </div>
+            </div>
+
+            <!-- Card 2: PAN Card -->
+            <div class="card">
+                <h3>💳 PAN Card (NSDL / UTI)</h3>
+                <p>नया डिजिटल/फिजिकल पैन कार्ड अप्लाई करें या अपने वर्तमान आवेदन की स्थिति जानें।</p>
+                <div class="btn-group">
+                    <a href="https://www.onlineservices.nsdl.com/paam/endUserRegisterContact.html" class="btn btn-reg" target="_blank">Apply NSDL</a>
+                    <a href="https://tin.tin.nsdl.com/pantan/StatusTrack.html" class="btn btn-status" target="_blank">Track Portal</a>
+                </div>
+            </div>
+
+            <!-- Card 3: Passport -->
+            <div class="card">
+                <h3> Passport Application</h3>
+                <p>नया पासपोर्ट सेवा पंजीकरण और फाइल सबमिशन के बाद वर्तमान स्टेटस ट्रैकिंग।</p>
+                <div class="btn-group">
+                    <a href="https://www.passportindia.gov.in" class="btn btn-reg" target="_blank">Register</a>
+                    <a href="https://passportindia.gov.in/AppOnlineProject/statusTracker/trackStatusInpNew" class="btn btn-status" target="_blank">Track Status</a>
+                </div>
+            </div>
+
+            <!-- Card 4: Aadhaar Card -->
+            <div class="card">
+                <h3>🆔 Aadhaar Card Services</h3>
+                <p>नया आधार नामांकन, अपॉइंटमेंट और डेमोग्राफिक/बायोमेट्रिक अपडेट की स्थिति देखें।</p>
+                <div class="btn-group">
+                    <a href="https://myaadhaar.uidai.gov.in" class="btn btn-reg" target="_blank">MyAadhaar</a>
+                    <a href="https://myaadhaar.uidai.gov.in/CheckAadhaarStatus" class="btn btn-status" target="_blank">Check Status</a>
+                </div>
+            </div>
+
+            <!-- Card 5: PF & EPF -->
+            <div class="card">
+                <h3>💼 PF &amp; EPF Services</h3>
+                <p>कर्मचारी भविष्य निधि (EPFO) पोर्टल पर नया पंजीकरण, क्लेम और पासबुक स्टेटस।</p>
+                <div class="btn-group">
+                    <a href="https://www.epfindia.gov.in" class="btn btn-reg" target="_blank">EPFO Portal</a>
+                    <a href="https://passbook.epfindia.gov.in/MemberPassBook/Login" class="btn btn-status" target="_blank">Check Passbook</a>
+                </div>
+            </div>
+
+            <!-- Card 6: Govt Job Apply -->
+            <div class="card">
+                <h3>📝 Govt Job Apply (All Exams)</h3>
+                <p>केंद्र व राज्य सरकार की नवीनतम सरकारी भर्तियों के ऑनलाइन आवेदन लिंक व स्टेटस।</p>
+                <div class="btn-group">
+                    <a href="https://www.sarkariresult.com" class="btn btn-reg" target="_blank">Latest Jobs</a>
+                    <a href="https://wa.me/917302507259?text=Mujhe%20Govt%20Job%20form%20ka%20status%20puchna%20hai." class="btn btn-status" target="_blank">Ask Status</a>
+                </div>
+            </div>
+
+            <!-- Card 7: Ayushman Bharath -->
+            <div class="card">
+                <h3>🏥 Ayushman Bharath (Golden Card)</h3>
+                <p>5 लाख रुपये तक का मुफ्त इलाज देने वाले आयुष्मान हेल्थ कार्ड का नया पंजीकरण व स्थिति।</p>
+                <div class="btn-group">
+                    <a href="https://beneficiary.nha.gov.in" class="btn btn-reg" target="_blank">Apply Online</a>
+                    <a href="https://wa.me/917302507259?text=Mujhe%20Ayushman%20Card%20status%20check%20karwana%20hai." class="btn btn-status" target="_blank">Track Status</a>
+                </div>
+            </div>
+
+            <!-- Card 8: State Services (e-District) -->
+            <div class="card">
+                <h3>📜 State Services (आय/जाति/निवास)</h3>
+                <p>उत्तर प्रदेश ई-डिस्ट्रिक्ट पोर्टल के माध्यम से विभिन्न राज्य स्तरीय सेवाओं का आवेदन व सत्यापन।</p>
+                <div class="btn-group">
+                    <a href="https://edistrict.up.gov.in" class="btn btn-reg" target="_blank">e-District Portal</a>
+                    <a href="https://edistrict.up.gov.in/eDistrict/Sanction/VerifyApplication.aspx" class="btn btn-status" target="_blank">Check Status</a>
+                </div>
+            </div>
+
+            <!-- Card 9: PM Kissan -->
+            <div class="card">
+                <h3>👨‍🌾 PM Kissan Samman Nidhi</h3>
+                <p>पीएम किसान सम्मान निधि योजना के तहत नया पंजीकरण एवं किस्त का स्टेटस (Beneficiary Status)।</p>
+                <div class="btn-group">
+                    <a href="https://pmkisan.gov.in/RegistrationFormNew.aspx" class="btn btn-reg" target="_blank">New Registration</a>
+                    <a href="https://pmkisan.gov.in/BeneficiaryStatus_New.aspx" class="btn btn-status" target="_blank">Check Status</a>
+                </div>
+            </div>
+
+            <!-- Card 10: Driving Licence -->
+            <div class="card">
+                <h3>🪪 Driving Licence &amp; RTO Services</h3>
+                <p>सारथी पोर्टल के माध्यम से लर्निंग/परमानेंट ड्राइविंग लाइसेंस आवेदन और आरटीओ स्टेटस।</p>
+                <div class="btn-group">
+                    <a href="https://sarathi.parivahan.gov.in" class="btn btn-reg" target="_blank">Apply Licence</a>
+                    <a href="https://vahan.parivahan.gov.in/nrservices/faces/user/citizen/citizenstatus.xhtml" class="btn btn-status" target="_blank">Track Status</a>
+                </div>
+            </div>
+
+            <!-- Card 11: MSME & Udhyam Reg -->
+            <div class="card">
+                <h3>🛠️ MSME &amp; Udhyam Reg</h3>
+                <p>छोटे व मध्यम उद्योगों के लिए भारत सरकार का आधिकारिक व्यवसाय पंजीकरण और सर्टिफिकेट प्रिंट।</p>
+                <div class="btn-group">
+                    <a href="https://udyamregistration.gov.in" class="btn btn-reg" target="_blank">Register</a>
+                    <a href="https://udyamregistration.gov.in/Udyam_VerifyCard.aspx" class="btn btn-status" target="_blank">Verify Reg</a>
+                </div>
+            </div>
+
+            <!-- Card 12: Business & Firm Reg -->
+            <div class="card">
+                <h3>🧱 Firm, Society, Company &amp; PVT LTD Reg</h3>
+                <p>प्रोप्राइटरशिप फर्म, एनजीओ, सोसाइटी, ट्रस्ट और प्राइवेट लिमिटेड कंपनियों का नया रजिस्ट्रेशन।</p>
+                <div class="btn-group">
+                    <a href="https://www.mca.gov.in" class="btn btn-reg" target="_blank">MCA Portal</a>
+                    <a href="https://wa.me/917302507259?text=Mujhe%20Firm/Company%20Registration%20ka%20status%20puchna%20hai." class="btn btn-status" target="_blank">Track via WA</a>
+                </div>
+            </div>
+
+            <!-- WHATSAPP CONTACT CARD FOR ALL OTHER MANUAL SERVICES -->
+            <div class="card" style="grid-column: span 1; border-left: 5px solid #25d366;">
+                <h3>📲 अन्य सभी सेवाएं (WhatsApp Direct)</h3>
+                <p>Adhar Payments/Withdrawals, Money Transfers, Deposits, LIC Policies, Indian Post, Bill Payments, Fasal Bhima, ITR &amp; GST, Bus/Train/Flight/Hotel Booking aur TTD Darshan ke liye seedhe aavedan karein.</p>
+                <a href="https://wa.me/917302507259" class="btn btn-wa" target="_blank">💬 व्हाट्सएप पर सीधे संपर्क करें</a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- BANNER MOTTO FROM IMAGE -->
+    <div class="motto-bar">
+        Yours Satisfaction is our Moto
+    </div>
+
+    <footer>
+        <p>&copy; 2026 दृश्य जन सेवा केंद्र - मधेपुरा, जालौन | सर्वाधिकार सुरक्षित</p>
+    </footer>
+
+</body>
+</html>
