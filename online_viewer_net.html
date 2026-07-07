@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drishya Jan Seva Kendra - CSC e-Gov Portal</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f8fafc; color: #0f172a; padding-bottom: 40px; }
+        
+        /* Digital Banner Layout (Based on 1783383004293.png) */
+        .digital-banner { 
+            background: linear-gradient(135deg, #1e6091, #1a4f7c); 
+            color: white; 
+            text-align: center; 
+            padding: 50px 20px; 
+            border-bottom: 6px solid #d4a373;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .digital-banner h1 { 
+            font-size: 2.6rem; 
+            margin-bottom: 10px; 
+            font-weight: 800; 
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        .digital-banner .sub-tag { 
+            font-size: 1.3rem; 
+            color: #fdf0d5; 
+            font-weight: 700; 
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+        .digital-banner .location-tag {
+            font-size: 1.05rem;
+            background: rgba(255, 255, 255, 0.1);
+            display: inline-block;
+            padding: 6px 15px;
+            border-radius: 50px;
+            margin-top: 5px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .container { max-width: 1400px; margin: 0 auto; padding: 20px; }
+        
+        /* Red Profile Bar */
+        .profile-bar { background: #c1121f; color: white; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); padding: 20px; margin: 25px 0 35px 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .profile-item { font-size: 1.1rem; margin: 5px 15px; font-weight: 600; }
+        .profile-item a { color: #fdf0d5; text-decoration: none; border-bottom: 1px dashed #fdf0d5; }
+
+        .section-title { font-size: 1.6rem; color: #1e6091; margin: 40px 0 20px 0; padding-bottom: 8px; border-bottom: 2px solid #cbd5e1; position: relative; font-weight: 700; }
+        .section-title::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 60px; height: 2px; background: #c1121f; }
+        
+        /* Responsive Grid System */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
+        .card { background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); display: flex; flex-direction: column; justify-content: space-between; transition: all 0.3s ease; border-top: 4px solid #1e6091; }
+        .card:hover { transform: translateY(-4px); box-shadow: 0 12px 20px rgba(0,0,0,0.06); border-color: #c1121f; }
+        .card h3 { font-size: 1.2rem; color: #1e6091; margin-bottom: 10px; font-weight: 600; border-bottom: 1px solid #f1f5f9; padding-bottom: 8px; }
+        .card p { font-size: 0.95rem; color: #64748b; line-height: 1.6; margin-bottom: 18px; }
+        
+        /* Action Buttons inside Card */
+        .btn-group { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .btn { display: block; text-align: center; padding: 10px 5px; border-radius: 6px; font-weight: bold; font-size: 0.85rem; text-decoration: none; transition: 0.2s; }
+        .btn-reg { background: #1e6091; color: white; }
+        .btn-reg:hover { background: #144569; }
+        .btn-status { background: #d4a373; color: #1e6091; border: 1px solid #d4a373; }
+        .btn-status:hover { background: #c49263; }
+        
+        /* Document Upload Custom Button */
+        .btn-upload { background: #3b82f6; color: white; grid-column: span 2; margin-top: 8px; text-align: center; padding: 10px; border-radius: 6px; font-weight: bold; font-size: 0.85rem; text-decoration: none; box-shadow: 0 2px 4px rgba(59, 130, 246, 0.2); }
+        .btn-upload:hover { background: #2563eb; }
+        
+        .motto-bar { background: #1e6091; color: white; text-align: center; padding: 15px; font-size: 1.2rem; font-weight: bold; font-style: italic; letter-spacing: 0.5px; border-top: 3px solid #c1121f; margin-top: 50px; }
+        footer { background: #0f172a; color: #94a3b8; text-align: center; padding: 20px; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <!-- DIGITAL BANNER -->
+    <div class="digital-banner">
+        <h1> दृश्या जन सेवा केंद्र</h1>
+        <div class="sub-tag">कॉमन सर्विस सेंटर</div>
+        <div class="location-tag">📍 स्थान: मढेपुरा, बरगद के पास, जालौन, उत्तर प्रदेश - 285124</div>
+    </div>
+
+    <div class="container">
+        
+        <!-- Profile bar -->
+        <div class="profile-bar">
+            <div class="profile-item">👤 प्रो० नितेंद्र कुमार</div>
+            <div class="profile-item">📞 मोबाइल नंबर: <a href="tel:7302507259">7302507259</a></div>
+        </div>
+
+        <!-- 35+ COMPREHENSIVE SERVICE GRID -->
+        <h2 class="section-title">💼 सभी 35+ डिजिटल एवं सरकारी सेवाएं (Links & Uploads)</h2>
+        <div class="services-grid">
+
+            <!-- 1. Voter ID -->
+            <div class="card">
+                <h3>Voter ID Card</h3>
+                <p>नया वोटर आईडी कार्ड ऑनलाइन पंजीकरण करें या पुराने का लाइव स्टेटस चेक करें।</p>
+                <div class="btn-group">
+                    <a href="https://voters.eci.gov.in" class="btn btn-reg" target="_blank">Register Portal</a>
+                    <a href="https://voters.eci.gov.in/home/track-application-status" class="btn btn-status" target="_blank">Check Status</a>
+                    <a href="https://wa.me/917302507259?text=Namaskar%20Nitendra%20Ji,%20Mujhe%20Voter%20ID%20ke%20liye%20photo%20aur%20doc%20upload%20karna%20hai." class="btn-upload">📁 Upload Photo &amp; Doc</a>
+                </div>
+            </div>
+
+            <!-- 2. PAN Card -->
+            <div class="card">
+                <h3>PAN Card (NSDL / UTI)</h3>
+                <p>नया पैन कार्ड अप्लाई करें या अपने वर्तमान आवेदन की सरकारी स्थिति ट्रैक करें।</p>
+                <div class="btn-group">
+                    <a href="https://www.onlineservices.nsdl.com/paam/endUserRegisterContact.html" class="btn btn-reg" target="_blank">Apply NSDL</a>
+                    <a href="https://tin.tin.nsdl.com/pantan/StatusTrack.html" class="btn btn-status" target="_blank">NSDL Status</a>
+                    <a href="https://wa.me/917302507259?text=Namaskar%20Nitendra%20Ji,%20Mujhe%20PAN%20Card%20ke%20liye%20photo%20aur%20documents%20upload%20karne%20hain." class="btn-upload">📁 Upload Photo &amp; Doc</a>
+                </div>
+            </div>
+
+            <!-- 3. Passport -->
+            <div class="card">
+                <h3>Passport Application</h3>
+                <p>नया पासपोर्ट सेवा पंजीकरण और फाइल सबमिशन के बाद वर्तमान स्टेटस ट्रैकिंग।</p>
+                <div class="btn-group">
+                    <a href="https://www.passportindia.gov.in" class="btn btn-reg" target="_blank">Register</a>
+                    <a href="https://passportindia.gov.in/AppOnlineProject/statusTracker/trackStatusInpNew" class="btn btn-status" target="_blank">Track Status</a>
+                    <a href="https://wa.me/917302507259?text=Namaskar%20Nitendra%20Ji,%20Passport%20apply%20ke%20liye%20doc%20upload%20karna%20hai." class="btn-upload">📁 Upload Photo &amp; Doc</a>
+                </div>
+            </div>
+
+            <!-- 4. Aadhaar Card -->
+            <div class="card">
+                <h3>Aadhaar Card Services</h3>
+                <p>UIDAI पोर्टल पर नया आधार नामांकन स्थिति, अपॉइंटमेंट और सुधार डिटेल्स ट्रैक करें।</p>
+                <div class="btn-group">
+                    <a href="https://myaadhaar.uidai.gov.in" class="btn btn-reg" target="_blank">MyAadhaar</a>
+                    <a href="https://myaadhaar.uidai.gov.in/CheckAadhaarStatus" class="btn btn-status" target="_blank">Check Status</a>
+                    <a href="https://wa.me/917302507259?text=Namaskar%20Nitendra%20Ji,%20Aadhaar%20work%20ke%20liye%20doc%20upload%20karna%20hai." class="btn-upload">📁 Upload Details</a>
+                </div>
+            </div>
+
+            <!-- 5. PF & EPF -->
+            <div class="card">
+                <h3>PF &amp; EPF Services</h3>
+                <p>कर्मचारी भविष्य निधि पोर्टल पर नया ईपीएफओ पंजीकरण, क्लेम और पासबुक स्थिति।</p>
+                <div class="btn-group">
+                    <a href="https://www.epfindia.gov.in" class="btn btn-reg" target="_blank">EPFO Portal</a>
+                    <a href="https://passbook.epfindia.gov.in/MemberPassBook/Login" class="btn btn-status" target="_blank">Check Passbook</a>
+                    <a href="https://wa.me/917302507259?text=Namaskar%20Nitendra%20Ji,%20PF/EPF%20work%20ke%20liye%20details%20bhejna%20hai." class="btn-upload">📁 Upload Details</a>
+                </div>
+            </div>
+
+            <!-- 6. Govt Job Apply -->
+            <div class="card">
+                <h3>Govt Job Apply</h3>
+                <p>केंद्र व राज्य सरकार की नवीनतम सरकारी भर्तियों के ऑनलाइन आवेदन लिंक व स्थिति।</p>
+                <div class="btn-group">
+                    <a href="https://www.sarkariresult.com" class="btn btn-reg" target="_blank">Latest Jobs</a>
+                    <a href="https://wa.me/917302507259?text=Namaskar%20Nitendra%20Ji,%20Mujhe%20Sarkari%20Naukri%20form%20bhrwana%20hai." class="btn btn-status" target="_blank">Track Status</a>
+                    <a href="https://wa.me/917302507259?text=Namaskar%20Nitendra%20Ji,%20Govt%20Job%20form%20ke%20liye%20photo-sign%20aur%20doc%20upload%20karna%20hai." class="btn-upload">📁 Upload Photo &amp; Doc</a>
+                </div>
+            </div>
+
+            <!-- 7. Ayushman Bharath -->
+            <div class="card">
+                <h3>Ayushman Bharath (Golden Card)</h3>
+                <p>₹5 लाख तक का मुफ्त इलाज देने वाले आयुष्मान कार्ड का नया पंजीकरण व स्थिति।</p>
+                <div class="btn-group">
+                    <a href="https://beneficiary.nha.gov.in" class="btn btn-reg" target="_blank">Apply Online</a>
+                    <a href="https://wa.me/917302507259?text=Mujhe%20Ayushman%20Card%20status%20check%20karwana%20hai." class="btn btn-status" target="_blank">Track Status</a>
+                    <a href="https://wa.me/917302507259?text=Namaskar%20Nitendra%20Ji,%20Ayushman%20Card%20ke%20liye%20Ration%20Card/Aadhaar%20upload%20karna%20hai." class="btn-upload">📁 Upload Photo &amp; Doc</a>
+                </div>
+            </div>
+
+            <!-- 8. State Services (Caste/Income/Niwas) -->
+            <div class="card">
+                <h3>State Services (आय/जाति/निवास)</h3>
+                <p>उत्तर प्रदेश ई-डिस्ट्रिक्ट पोर्टल के माध्यम से प्रमाण पत्रों का ऑनलाइन आवेदन व लाइव सत्यापन।</p>
+                <div class="btn-group">
+                    <a href="https://edistrict.up.gov.in" class="btn btn-reg" target="_blank">e-District Portal</a>
+                    <a href="https://edistrict.up.gov.in/eDistrict/Sanction/VerifyApplication.aspx" class="btn btn-status" target="_blank">Verify Status</a>
+                    <a href="https://wa.me/917302507259?text=Namaskar%20Nitendra%20Ji,%20Aay-Jati-Niwas%20ke%20liye%20photo%20aur%20doc%20upload%20karna%20hai." class="btn-upload">📁 Upload Photo &amp; Doc</a>
+                </div>
+            </div>
+
+            <!-- 9. Driving Licence & RTO -->
+            <div class="card">
+                <h3>Driving Licence &amp; RTO Services</h3>
+                <p>सारथी परिवहन सेवा के जरिए नए लर्निंग/परमानेंट ड्राइविंग लाइसेंस आवेदन और आरटीओ स्थिति।</p>
+                <div class="btn-group">
+                    <a href="https://sarathi.parivahan.gov.in" class="btn btn-reg" target="_blank">Apply Licence</a>
+                    <a href="https://vahan.parivahan.gov.in/nrservices/faces/user/citizen/citizenstatus.xhtml" class="btn btn-status" target="_blank">Track Status</a>
+                    <a href="https://wa.me/917302507259?text=Namaskar%20Nitendra%20Ji,%20Driving%20Licence%20ke%20liye%20doc%20upload%20karna%20hai." class="btn-upload">📁 Upload Photo &amp; Doc</a>
+                </div>
+            </div>
+
+            <!-- 10. MSME & Udhyam Reg -->
+            <div class="card">
+                <h3>MSME &amp; Udhyam Reg</h3>
+                <p>छोटे व मध्यम व्यापारिक प्रतिष्ठानों के लिए भारत सरकार का उद्यम पंजीकरण और सर्टिफिकेट वेरिफिकेशन।</p>
+                <div class="btn-group">
+                    <a href="https://udyamregistration.gov.in" class="btn btn-reg" target="_blank">Register Portal</a>
+                    <a href="https://udyamregistration.gov.in/Udyam_VerifyCard.aspx" class="btn btn-status" target="_blank">Verify Card</a>
+                    <a href="https://wa.me/917302507259?text=Namaskar%20Nitendra%20Ji,%20Udhyam%20Registration%20ke%20liye%20details%20upload%20karna%20hai." class="btn-upload">📁 Upload Business Doc</a>
+                </div>
+            </div>
+
+            <!-- 11. Firm, Society & Company Reg -->
+            <div class="card">
+                <h3>Firm, Society, Company &amp; PVT LTD Reg</h3>
+                <p>प्रोप्राइटरशिप फर्म, एनजीओ, सोसाइटी, ट्रस्ट और प्राइवेट लिमिटेड कंपनियों का वैधानिक कॉरपोरेट पंजीकरण।</p>
+                <div class="btn-group">
+                    <a href="https://www.mca.gov.in" class="btn btn-reg" target="_blank">MCA Portal</a>
+                    <a href="https://wa.me/917302507259?text=Mujhe%20Company%20Registration%20ka%20status%20puchna%20hai." class="btn btn-status" target="_blank">Track Status</a>
+                    <a href="https://wa.me/917302507259?text=Namaskar%20Nitendra%20Ji,%20Firm/Society%20registration%20ke%20liye%20doc%20upload%20karna%20hai." class="btn-upload">📁 Upload Business Doc</a>
+                </div>
+            </div>
+
+            <!-- 12. PM Kissan & Fasal Bhima -->
+            <div class="card">
+                <h3>PM Kissan &amp; Fasal Bhima</h3>
+                <p>किसान सम्मान निधि योजना का नया पंजीकरण, e-KYC स्थिति एवं फसल बीमा आवेदन।</p>
+                <div class="btn-group">
+                    <a href="https://pmkisan.gov.in/RegistrationFormNew.aspx" class="btn btn-reg" target="_blank">PM Kisan Reg</a>
+                    <a href="https://pmkisan.gov.in/BeneficiaryStatus_New.aspx" class="btn btn-status" target="_blank">Check Installment</a>
+                    <a href="https://wa.me/917302507259?text=Namaskar%20Nitendra%20Ji,%20PM%20Kisan%20ya%20Fasal%20Bima%20ke%20liye%20Khatauni%20upload%20karna%20hai." class="btn-upload">📁 Upload Photo &amp; Doc</a>
+                </div>
+            </div>
+
+            <!-- 13. Loans & LIC Policies -->
+            <div class="card">
+                <h3>Loans &amp; LIC Policies</h3>
+                <p>सरकारी व्यावसायिक लोन डिजिटल आवेदन तथा एलआईसी (LIC) जीवन बीमा प्रीमियम ऑनलाइन भुगतान।</p>
+                <div class="btn-group">
+                    <a href="https://wa.me/917302507259?text=Namaskar%20Nitendra%20Ji,%20LIC%20Premium%20bhrna%20hai." class="btn btn-reg" target="_blank">LIC Payment</a>
+                    <a href="https://wa.me/917302507259?text=Loan%20application%20status." class="btn btn-status" target="_blank">Loan Status</a>
+                    <a href="https://wa.me/917302507259?text=Namaskar%20Nitendra%20Ji,%20Loan/LIC%20ke%20liye%20details%20upload%20karna%20hai." class="btn-upload">📁 Upload Details</a>
+                </div>
+            </div>
+
+            <!-- 14. Travel Tickets (Train, Bus, Flight, Hotel) -->
+            <div class="card">
+                <h3>Travel Tickets &amp; TTD Darshan</h3>
+                <p>IRCTC ट्रेन टिकट कन्फर्म बुकिंग, एक्सप्रेस बसें, हवाई यात्रा टिकट एवं तिरुपति देवस्थानम दर्शन बुकिंग।</p>
+                <div class="btn-group">
+                    <a href="https://wa.me/917302507259?text=Namaskar%20Nitendra%20Ji,%20Mujhe%20Ticket%20book%20karwani%20hai." class="btn btn-reg" target="_blank">Book Ticket</a>
+                    <a href="https://wa.me/917302507259?text=TTD%20Darshan%20ticket%20status." class="btn btn-status" target="_blank">Darshan Status</a>
+                    <a href="https://wa.me/917302507259?text=Namaskar%20Nitendra%20Ji,%20Ticket%20booking%20ke%20liye%20Aadhaar/ID%20details%20upload%20karna%20hai." class="btn-upload">📁 Upload ID Details</a>
+                </div>
+            </div>
+
+            <!-- 15. Other Offline Services (Banking, Photostat, Insurance, Bill Payments) -->
+            <div class="card" style="border-left: 5px solid #25d366;">
+                <h3>Cash Withdrawal, Insurance &amp; Bills</h3>
+                <p>आधार निकासी (AEPS), डोमेस्टिक मनी ट्रांसफर, बिजली-गैस बिल भुगतान, गाड़ी का बीमा, फोटोस्टेट व लैमिनेशन कार्य।</p>
+                <a href="https://wa.me/917302507259" class="btn btn-wa" style="grid-column: span 2; background: #25d366; color: white; text-align: center; font-weight: bold; text-decoration: none; padding: 12px; border-radius: 6px; margin-top: 10px;" target="_blank">💬 व्हाट्सएप पर सीधे संपर्क करें</a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- BANNER MOTTO FROM IMAGE -->
+    <div class="motto-bar">
+        Yours Satisfaction is our Moto
+    </div>
+
+    <footer>
+        <p>&copy; 2026 दृश्या जन सेवा केंद्र - मढेपुरा, जालौन | सर्वाधिकार सुरक्षित</p>
+    </footer>
+
+</body>
+</html>
